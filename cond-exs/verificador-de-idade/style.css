@@ -25,6 +25,10 @@ section {
     text-align: center;
 }
 
+img {
+    width: 50%;
+}
+
 footer {
     color: white;
     text-align: center;
