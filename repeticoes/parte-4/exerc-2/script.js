@@ -1,24 +1,18 @@
-function calcular() {
-    let txtano = document.querySelector('#txtano')
-    let res = document.querySelector('#res')
-
-
-
-    if () {
-        res.innerHTML = 'res'
-        return
-    }
-
-    let genero = ''
-
-    if (fem.checked) {
-        genero = 'Mulher'
-    } else if (masc.checked) {
-        genero = 'Homem'
+function tabuada() {
+    let num = document.getElementById('txtn')
+    let tab = document.getElementById('seltab')
+    if (num.value.length == 0) {
+        window.alert('Por favor, digite um número!')
     } else {
-        res.innerHTML = 'Selecione um sexo'
-        return
+        let n = Number(num.value)
+        let c = 1
+        tab.innerHTML = ''
+        while (c <= 10) {
+            let item = document.createElement('option')
+            item.text = `${n} x ${c} = ${n*c}`
+            item.value = `tab${c}`
+            tab.appendChild(item)
+            c++
+        }
     }
-
-    res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
 }
